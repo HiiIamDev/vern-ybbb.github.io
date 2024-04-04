@@ -1,0 +1,418 @@
+:root {
+
+  --footer-color: #191A19;
+  --background: #e6f0df;
+  --collor: #344955;
+
+  --primary-color: #344955;
+  --alternat-color: #50727B;
+
+  --button-color: #78A083;
+  --button-color-hover: #52725b;
+
+  
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+
+  background-color: var(--background);
+
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: #50758049;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-10 {
+  padding-top: 10px;
+}
+
+.alias {
+  font-size: 10px;
+  color: rgb(124, 199, 143);
+}
+
+.wrapper-mid {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--footer-color);
+}
+
+.alternate {
+  background-color: var(--alternat-color);
+  color: var(--background);
+}
+
+nav {
+  width: 100%;
+  z-index: 3;
+  position: fixed;
+  background-color: var(--background);
+}
+
+.container.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: auto;
+  height: 60px;
+}
+
+nav ul {
+  margin-left: 10px;
+  display: flex;
+  list-style-type: none;
+  gap: 10px;
+}
+
+.anchor.nav {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+
+  padding: 8px;
+  border-radius: 4px;
+
+  color: var(--button-color);
+
+  transition: 0.4s;
+}
+
+.anchor.nav:hover {
+  color: var(--button-color-hover);
+  background-color: #91bd9d4f;
+}
+
+.anchor.dif {
+  text-decoration: none;
+
+  padding: 8px;
+  border-radius: 4px;
+
+  background-color: var(--button-color);
+  color: white;
+
+  transition: 0.4s;
+}
+
+.anchor.dif:hover {
+  background-color: var(--button-color-hover);
+}
+
+.responsive-button-navbar  {
+  display: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  /* text-decoration: none; */
+
+  padding: 8px;
+  border-radius: 4px;
+
+  color: var(--button-color);
+
+  transition: 0.4s;
+}
+
+.responsive-button-navbar:hover {
+  color: var(--button-color-hover);
+  background-color: #91bd9d4f;
+}
+
+
+.wrapper-res-nav {
+  height: 100%;
+  width: 0;
+
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+
+  background-color: var(--primary-color);
+  overflow-x: hidden;
+
+  transition: 0.5s;
+
+  padding-top: 60px;
+}
+
+.wrapper-res-nav a {
+  /* padding: 8px 8px 8px 32px; */
+  text-decoration: none;
+  /* font-size: 25px; */
+  /* color: #818181; */
+  display: block;
+  /* transition: 0.3s; */
+}
+
+.anchor.nav.se {
+  border-radius: 0px;
+}
+
+.wrapper-res-nav a:hover {
+  color: white;
+}
+
+.anchor.nav.se:hover {
+  color: white;
+}
+
+.s {
+  position: absolute;
+  top: 0;
+  right: 25px;
+
+  margin: 10px;
+  margin-left: 50px;
+  
+  font-size: 36px;
+  color: white;
+}
+
+.nav-home {
+  display: flex;
+  justify-content: space-between;
+
+  color: #b6b6b6;
+
+  padding: 15px;
+
+  width: 86%;
+
+  position: absolute;
+  top: 0;
+}
+
+.nav-home a {
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.nav-home a:hover {
+  color: white;
+}
+
+.background-image {
+  background: url('/assets/background.png');
+  background-size: cover;
+  background-position: center;
+
+  background-attachment: fixed;
+  
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-wrapper {
+  width: 80%;
+  text-align: center;
+  color: var(--background);
+}
+
+.menu-wrapper .title h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+
+.paraf-ref {
+  display: none;
+}
+
+.keyword {
+  cursor: pointer;
+  background-color: #78a0834b;
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 2px 8px;
+  border-radius: 2px;
+  transition: 0.4s;
+}
+
+.keyword:hover {
+  background-color: #4e6957c5;
+  color: var(--background);
+}
+
+.tagged {
+  font-weight: 500;
+  font-style: italic;
+}
+
+.list-menu {
+  width: 70%;
+  margin: 10px auto;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.li-menu {
+  padding: 8px;
+  margin: 8px;
+
+  text-decoration: none;
+  border-radius: 5px;
+
+  background-color: #50727B;
+  color: white;
+
+  transition: 0.4s;
+}
+
+.li-menu:hover {
+  color: white;
+  background-color: #426664;
+}
+
+.container.about {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.title.about, .wrapper-line, .paraf.about {
+  margin: 10px;
+  margin: auto;
+}
+
+.title.about {
+  width: 50%;
+  text-align: right;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+.paraf.about {
+  width: 40%;
+  height: auto;
+}
+
+
+
+.button.about {
+  text-align: start;
+}
+
+.wrapper-line {
+  display: flex;
+  align-items: center;
+}
+
+.vertical-line {
+  border-left: 1px solid var(--primary-color); 
+  border-radius: 4px;
+  height: 35vh; /* tinggi garis */
+}
+
+.button.about {
+  margin: 5px;
+}
+
+.icon {
+  transform: translateY(7px);
+}
+
+.button.about a {
+  color: var(--collor);
+  text-decoration: none;
+
+  transition: 0.2s;
+
+  padding: 5px 10px;
+}
+
+.button.about a:hover {
+  background-color: #3449558f;
+  color: var(--background);
+}
+
+.menu-wrapper .paraf {
+  font-weight: 300;
+  /* display: none; */
+}
+
+.horizon-line {
+  border-bottom: 1px solid var(--footer-color);
+  height: 1px;
+  width: 80%;
+  display: none;
+  margin: auto;
+}
+
+.wrapper-wip {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+@media screen and (max-width: 540px) {
+  nav ul {
+    display: none;
+  }
+  .responsive-button-navbar {
+    display: flex;
+  }
+
+  .menu-wrapper {
+    width: 90%;
+  }
+  .menu-wrapper .title h1{
+    font-weight: 700;
+    font-size: 40px;
+  }
+
+  .menu-wrapper .paraf {
+    display: none;
+  }
+
+  .paraf-ref {
+    display: flex;
+    font-weight: 300;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .title.about {
+    text-align: center;
+    width: 100%;
+  }
+
+  .container.about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .paraf.about {
+    width: 100%;
+  }
+  .vertical-line {
+    display: none;
+  }
+  .horizon-line {
+    display: flex;
+    
+  }
+
+  .button.about {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
