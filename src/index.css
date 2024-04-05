@@ -43,11 +43,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 
   color: var(--footer-color);
 }
 
 .alternate {
+  align-items: center;
   background-color: var(--alternat-color);
   color: var(--background);
 }
@@ -249,8 +251,15 @@ nav ul {
 }
 
 .tagged {
-  font-weight: 500;
+  /* font-weight: 100; */
+  font-family: serif;
   font-style: italic;
+}
+
+.taggeds {
+  font-family: serif;
+  font-style: italic;
+  font-size: 20px;
 }
 
 .list-menu {
@@ -264,21 +273,22 @@ nav ul {
 }
 
 .li-menu {
-  padding: 8px;
   margin: 8px;
 
-  text-decoration: none;
-  border-radius: 5px;
+  text-decoration: underline;
+  
+  padding: 1px 4px;
+  text-underline-offset: 8px;
 
-  background-color: #50727B;
-  color: white;
+  color: #6b7972;
 
-  transition: 0.4s;
+  transition: 0.2s ease-in;
 }
 
 .li-menu:hover {
   color: white;
-  background-color: #426664;
+  background-color: #50727b33;
+  /* background-color: #426664; */
 }
 
 .container.about {
@@ -298,6 +308,10 @@ nav ul {
   height: auto;
   display: flex;
   align-items: center;
+
+  font-family: serif;
+  font-weight: 900;
+  font-size: 20px;
 }
 
 .paraf.about {
@@ -323,11 +337,12 @@ nav ul {
 }
 
 .button.about {
-  margin: 5px;
+  margin-top: 5px;
 }
 
 .icon {
   transform: translateY(7px);
+  margin: 0;
 }
 
 .button.about a {
@@ -362,6 +377,55 @@ nav ul {
   flex-direction: column;
   text-align: center;
 }
+
+.wrapper.pr {
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title.pr {
+  width: auto;
+  text-align: center;
+}
+
+.container.pr {
+  width: 80%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.cards {
+  width: 400px;
+
+  background-color: #c8cab0;
+  color: #344955e7;
+
+  overflow: hidden;
+
+  /* border-radius: 3px; */
+  border-bottom: 5px solid var(--primary-color);
+  border-right: 5px solid var(--primary-color);
+}
+
+.cards .paraf-cards {
+  padding: 20px;
+}
+
+.blurred {
+  font-weight: 300;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  color: #354046e1;
+}
+
 
 @media screen and (max-width: 540px) {
   nav ul {

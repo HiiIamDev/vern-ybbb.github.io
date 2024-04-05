@@ -11,7 +11,7 @@ export default function Nav () {
                         <a href="/"><img src="/assets/logo.png" alt="Logo" width={30}/></a>
                     </div>
                     <ul>
-                        <li><a href="#" className="anchor nav">Home</a></li>
+                        <li><a href="/" className="anchor nav">Home</a></li>
                         <li><a href="#about" className="anchor nav">About</a></li>
                         <li><a href="#" className="anchor nav">Contact</a></li>
                         <li><a href="#" className="anchor nav">News</a></li>
