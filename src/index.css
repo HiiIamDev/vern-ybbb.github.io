@@ -23,7 +23,17 @@
   background-color: #50758049;
 }
 
-.text-center {
+/* ::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2e0303;
+  border-radius: px;
+  width: 10px;
+}
+*/
+.text-center { 
   text-align: center;
 }
 
@@ -38,7 +48,7 @@
 
 .wrapper-mid {
   width: 100%;
-  height: 100vh;
+  height: auto;
 
   display: flex;
   justify-content: center;
@@ -121,6 +131,8 @@ nav ul {
 
   color: var(--button-color);
 
+  align-items: center;
+  justify-content: center;
   transition: 0.4s;
 }
 
@@ -263,13 +275,29 @@ nav ul {
 }
 
 .list-menu {
-  width: 70%;
-  margin: 10px auto;
-
+  width: 100%;
+  
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  flex-direction: row;
+}
+
+.button.mdf a {
+  color: var(--background);
+  text-decoration: none;
+
+  transition: 0.3s;
+
+  padding: 5px 10px;
+
+}
+
+.button.mdf {
+  margin-top: 10px;
+}
+
+.button.mdf a:hover{ 
+  background-color: #3449558f;
+  color: var(--background);
 }
 
 .li-menu {
@@ -379,11 +407,12 @@ nav ul {
 }
 
 .wrapper.pr {
-  width: 80%;
+  width: 100%;
   height: auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
+
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .title.pr {
@@ -392,7 +421,7 @@ nav ul {
 }
 
 .container.pr {
-  width: 80%;
+  width: 100%;
 
   display: flex;
   justify-content: center;
@@ -403,7 +432,8 @@ nav ul {
 }
 
 .cards {
-  width: 400px;
+  margin: 20px;
+  width: 350px;
 
   background-color: #c8cab0;
   color: #344955e7;
@@ -426,14 +456,31 @@ nav ul {
   color: #354046e1;
 }
 
+.paraf-pr  {
+  /* display: none; */
+  font-weight: 200;
+  padding: 0 20px 20px;
+}
+
+.full-screen {
+  width: 100%;
+  height: 100vh;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.items-center {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+}
 
 @media screen and (max-width: 540px) {
-  nav ul {
-    display: none;
-  }
-  .responsive-button-navbar {
-    display: flex;
-  }
+  
+  
 
   .menu-wrapper {
     width: 90%;
@@ -450,6 +497,15 @@ nav ul {
   .paraf-ref {
     display: flex;
     font-weight: 300;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  nav ul {
+    display: none;
+  }
+  .responsive-button-navbar {
+    display: flex;
   }
 }
 

@@ -6,6 +6,7 @@ import WrapperMid from './utils/wrapperGlobal'
 import About from './utils/about/about'
 import Proggrams from './utils/proggram/proggram'
 import Cards from './utils/proggram/cards'
+import WrapperFullScreen from './utils/wrapperVh'
 
 export default function App () {
   return (
@@ -21,10 +22,12 @@ export default function App () {
         </Home>
 
         <div className="text-center mt-10">
-          <h2> About Us <span className="alias">*Tentang Kami</span></h2>
+          <h2> About Us</h2>
         </div>
         <WrapperMid color='background' locate='about'>
-          <About />
+          <WrapperFullScreen>
+            <About />
+          </WrapperFullScreen>
         </WrapperMid>
 
         {/* <div className="text-center alternate mt-10">
@@ -32,19 +35,32 @@ export default function App () {
         </div> */}
         <WrapperMid color='alternate' locate='proggram'>
           <div className="title pr">
-            <h1>Proggrams Us <span className="alias">*Proggram Kita</span></h1>
+            <br />
+            <h1>Proggrams & Event Us</h1>
+          </div>
+          <div className="paraf-pr">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus maxime harum a?</p>
           </div>
           <Proggrams >
-            <Cards content={{
-              img : "https://placeholder.co/500x300",
-              imgSize: '100%',
-              title : "Lorem Ipsum",
-              leads : "John Doe",
-              parafMini : "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, tempore!",
-              urlBtn : "#button",
-              paraf : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta eveniet tempore asperiores deserunt distinctio obcaecati sequi mollitia aperiam veritatis, odit, enim similique in provident consequuntur iusto, est a quam. Doloremque dolores nobis qui cupiditate corporis laborum quod modi sint, similique aut."
-            }}/>
+            {/* Looping For Temporrary */}
+            {[...Array(6)].map(() => (
+                <Cards content={{
+                  img : "https://placeholder.co/500x300",
+                  imgSize: '100%',
+                  title : "Lorem Ipsum",
+                  leads : "John Doe",
+                  parafMini : "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, tempore!",
+                  urlBtn : "#button",
+                  paraf : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta eveniet tempore asperiores deserunt distinctio obcaecati sequi mollitia aperiam veritatis, odit, enim similique in provident consequuntur iusto, est a quam. Doloremque dolores nobis qui cupiditate corporis laborum quod modi sint, similique aut."
+                }}/>
+              ))}
+              
           </Proggrams>
+          <div className="button mdf items-center">
+              <a href="/program-and-contacts">Show More..</a>
+          </div>
+          <br />
+          <br />
         </WrapperMid> 
       </div>
     </>

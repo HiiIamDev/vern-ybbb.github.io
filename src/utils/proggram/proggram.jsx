@@ -5,7 +5,6 @@ export default function Proggrams ({
     return (
         <>
             <br />
-            <br />
             <div className="wrapper pr">
                 <div className="container pr">
                     {children}

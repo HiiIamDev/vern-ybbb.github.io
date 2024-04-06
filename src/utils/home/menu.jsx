@@ -1,4 +1,3 @@
-
 export default function Menu () {
     return (
         <div className="menu-wrapper">
@@ -16,11 +15,9 @@ export default function Menu () {
                 aspernatur nesciunt magnam ex vitae labore </p>
             </div>
             <div className="list-menu">
-                <a href="#proggram" className="li-menu">Proggram</a>
-                <a href="#" className="li-menu">Gallery</a>
-                <a href="#" className="li-menu">Donate</a>
-                <a href="#" className="li-menu">Event</a>
-                <a href="#" className="li-menu">Join Us</a>
+                <div className="button mdf">
+                        <a href="#about">See About Us...</a>
+                </div>
             </div>
         </div>
     )

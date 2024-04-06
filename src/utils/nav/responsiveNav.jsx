@@ -20,10 +20,14 @@ export function ResponsiveNav () {
             </div>
             <ul>
                 <li><a href="#" className="anchor nav se">Home</a></li>
-                <li><a href="#" className="anchor nav se">About</a></li>
-                <li><a href="#" className="anchor nav se">Contact</a></li>
-                <li><a href="#" className="anchor nav se">News</a></li>
-                <li><a href="#" className="anchor dif">Join Us</a></li>
+                <li><a href="#about" className="anchor nav se">About</a></li>
+                <li><a href="#contact" className="anchor nav se">Contact</a></li>
+                <li><a href="#news" className="anchor nav se">News</a></li>
+                <li><a href="#proggram" className="anchor nav se">Proggram</a></li>
+                <li><a href="#gallery" className="anchor nav se">Gallery</a></li>
+                <li><a href="/donate" className="anchor nav se">Donate</a></li>
+                <li><a href="#event" className="anchor nav se">Event</a></li>
+                <li><a href="/join" className="anchor dif">Join Us</a></li>
             </ul>
         </div>
     )
