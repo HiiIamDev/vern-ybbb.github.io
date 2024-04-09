@@ -1,11 +1,12 @@
 
 export default function Proggrams ({
-    children
+    children,
+    locate
 }) {
     return (
         <>
             <br />
-            <div className="wrapper pr">
+            <div className="wrapper pr" id={locate}>
                 <div className="container pr">
                     {children}
                 </div>

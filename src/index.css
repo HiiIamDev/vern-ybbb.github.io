@@ -7,6 +7,12 @@
   --primary-color: #344955;
   --alternat-color: #50727B;
 
+  --news-color: #436850;
+  --news-alternate: #005B41;
+
+  --cards-news: #94b3a8;
+  --text-news: #9EC8B9;
+
   --button-color: #78A083;
   --button-color-hover: #52725b;
 
@@ -61,6 +67,12 @@
 .alternate {
   align-items: center;
   background-color: var(--alternat-color);
+  color: var(--background);
+}
+
+.blackGreen {
+  /* display: none; */
+  background-color: var(--news-color);
   color: var(--background);
 }
 
@@ -435,10 +447,13 @@ nav ul {
   margin: 20px;
   width: 350px;
 
-  background-color: #c8cab0;
+  /* background-color: black; */
   color: #344955e7;
 
   overflow: hidden;
+
+  transition: 0.4s;
+  cursor: pointer;
 
   /* border-radius: 3px; */
   border-bottom: 5px solid var(--primary-color);
@@ -447,7 +462,20 @@ nav ul {
 
 .cards .paraf-cards {
   padding: 20px;
+  z-index: 3;
+  background-color: #c8cab0;
 }
+
+.cards img {
+  transition: 0.4s;
+  background-position: center;
+}
+
+.cards img:hover {
+  transform: scale(1.1);
+}
+
+
 
 .blurred {
   font-weight: 300;
@@ -462,6 +490,18 @@ nav ul {
   padding: 0 20px 20px;
 }
 
+.wrapper-pages {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  width: 100%;
+  height: auto;
+}
+
 .full-screen {
   width: 100%;
   height: 100vh;
@@ -469,6 +509,9 @@ nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .items-center {
@@ -478,9 +521,49 @@ nav ul {
   width: 100%;
 }
 
+.paraf-news {
+  padding: 10px;
+  color: var(--collor);
+}
+
+.paraf-news h2 {
+  font-size: 26px;
+}
+
+.writter-news {
+  font-style: italic;
+  font-weight: 200;
+
+  text-decoration: underline;
+  text-underline-offset: 4px;
+
+  color: var(--footer-color);
+
+}
+
+.cards-news {
+  width: 350px;
+  height: auto;
+
+  margin: 20px;
+  
+  overflow: hidden;
+
+  border-radius: 4px;
+  border: 1px solid var(--alternat-color);
+
+  background-color: var(--cards-news);
+  color: white;
+}
+
+
+@media screen and (min-width: 540px ) {
+  .wrapper-res-nav {
+    width: 0;
+  }
+}
+
 @media screen and (max-width: 540px) {
-  
-  
 
   .menu-wrapper {
     width: 90%;

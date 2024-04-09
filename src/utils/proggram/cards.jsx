@@ -11,17 +11,19 @@ export default function Cards(
             parafMini,
             urlBtn,
             paraf
-        }
+        },
+        tags
     }
 ) {
     return (
         <div className="cards">
-            <div className="img-cards">
-                <img 
-                    src={img} 
-                    alt={title} 
-                    width={imgSize} 
-                />
+            <img 
+                src={img} 
+                alt={title} 
+                width={imgSize} 
+            />
+            <div className="tags">
+                <span>{tags}</span>
             </div>
             <div className="paraf-cards">
                 <h2>{title}</h2>

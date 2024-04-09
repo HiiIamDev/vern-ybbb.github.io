@@ -1,15 +1,21 @@
 import { X } from 'react-feather'
 import App from '../../App';
 
-
-
 export function openNav () {
     document.getElementById("nav").style.width = "250px";
+    function checkerInnerWidth () {
+        if (window.innerWidth >= 850) {
+            document.getElementById('nav').style.width = '0'
+        }
+    }
+
+    window.addEventListener('resize', checkerInnerWidth)
 }
 
 function closeNav () {
     document.getElementById("nav").style.width = "0";
 }
+
 
 export function ResponsiveNav () {
     return (
