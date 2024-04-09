@@ -1,6 +1,6 @@
 import Home from '../utils/home/home'
 import Menu from '../utils/home/menu'
-import Nav from '../utils/nav/nav'
+import { Nav } from '../utils/nav/nav'
 import { ResponsiveNav } from '../utils/nav/responsiveNav'
 import WrapperMid from '../utils/wrapperGlobal'
 import About from '../utils/about/about'
@@ -9,6 +9,7 @@ import Cards from '../utils/proggram/cards'
 import WrapperFullScreen from '../utils/wrapperVh'
 import CardsNews from '../utils/news/cards'
 import WrapperPages from '../utils/wrapperPages'
+
 
 export default function HomeDirectory () {
 
@@ -33,7 +34,7 @@ export default function HomeDirectory () {
           </WrapperFullScreen>
         </WrapperMid>
         {/* anggota */}
-        <WrapperMid color='alternate' >
+        <WrapperMid color='alternate' locate='explore'>
           <div className="title pr">
             <br />
             <h1 id='proggram'>Proggrams Us</h1>
@@ -41,56 +42,29 @@ export default function HomeDirectory () {
           <div className="paraf-pr">
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus maxime harum a?</p>
           </div>
-          <Proggrams >
+          <Proggrams >  
             {/* Looping For Temporrary */}
-            {[...Array(6)].map(() => (
-                <Cards content={{
-                  img : "https://placeholder.co/500x300",
-                  imgSize: '100%',
-                  title : "Lorem Ipsum",
-                  leads : "John Doe",
-                  parafMini : "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, tempore!",
-                  urlBtn : "#button",
-                  paraf : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta eveniet tempore asperiores deserunt distinctio obcaecati sequi mollitia aperiam veritatis, odit, enim similique in provident consequuntur iusto, est a quam. Doloremque dolores nobis qui cupiditate corporis laborum quod modi sint, similique aut."
-                }} tags/>
-              ))}
+            {/* {[...Array(6)].map(() => (
+            ))} */}
+            <Cards content={{
+              img : "https://placeholder.co/500x300",
+              imgSize: '100%',
+              title : "Lorem Ipsum",
+              leads : "John Doe",
+              parafMini : "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, tempore!",
+              urlBtn : "#button",
+              paraf : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta eveniet tempore asperiores deserunt distinctio obcaecati sequi mollitia aperiam veritatis, odit, enim similique in provident consequuntur iusto, est a quam. Doloremque dolores nobis qui cupiditate corporis laborum quod modi sint, similique aut."
+            }} tags/>
+
+            <CardsNews context={{
+              imgUrl: "https://placeholder.co/500x300",
+              title: 'lorem Ipsum',
+              writter: 'John Doe',
+              description: 'lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, tempore!'
+            }}/>
               
           </Proggrams>
-          <div className="button mdf items-center">
-              <a href="/program-and-contacts">Show More..</a>
-          </div>
-          <br />
-          <br />
-        </WrapperMid> 
-        <WrapperMid color='blackGreen' >
-          <div className="title pr">
-            <br />
-            <h1 id='news'>News About Us</h1>
-          </div>
-          <div className="paraf-pr">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus maxime harum a?</p>
-          </div>
-          <WrapperPages locate='news'>
-              {/* {
-                [...Array(6)].map(() => (
-                  <CardsNews 
-                  context={{
-                    imgUrl: 'https://placeholder.co/500x300',
-                    title: "News",
-                    writter: "john doe",
-                    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, tempore!',
-                    content: 'lorem20'
-                  }}
-                  />
-                ))
-              } */}
-          </WrapperPages>
-          <div className="button mdf items-center">
-              <a href="/program-and-contacts">Show More..</a>
-          </div>  
-          <br />
         </WrapperMid>
-
       </div>
     </>
   )

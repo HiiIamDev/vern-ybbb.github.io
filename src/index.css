@@ -522,7 +522,7 @@ nav ul {
 }
 
 .paraf-news {
-  padding: 10px;
+  padding: 20px;
   color: var(--collor);
 }
 
@@ -537,8 +537,7 @@ nav ul {
   text-decoration: underline;
   text-underline-offset: 4px;
 
-  color: var(--footer-color);
-
+  color: #c0e3c0;
 }
 
 .cards-news {
@@ -549,11 +548,27 @@ nav ul {
   
   overflow: hidden;
 
-  border-radius: 4px;
-  border: 1px solid var(--alternat-color);
+  /* border-radius: 4px; */
+  border-bottom: 5px solid #344955;
+
+  border-right: 5px solid #344955;
 
   background-color: var(--cards-news);
   color: white;
+  
+  /* display: none  ; */
+}
+
+.paraf-news {
+  color: var(--background);
+}
+
+.drop-down {
+  z-index: 99999;
+  
+  position:fixed;
+  top: 50%;
+  left: 40%;
 }
 
 
