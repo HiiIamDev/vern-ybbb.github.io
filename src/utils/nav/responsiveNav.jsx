@@ -3,7 +3,9 @@ import App from '../../App';
 import { ContentNav } from './nav'
 
 export function openNav () {
-    document.getElementById("nav").style.width = "250px";
+    const nav = document.getElementById("nav")
+
+    nav.style.width = "250px";
     function checkerInnerWidth () {
         if (window.innerWidth >= 850) {
             document.getElementById('nav').style.width = '0'
@@ -13,7 +15,7 @@ export function openNav () {
     window.addEventListener('resize', checkerInnerWidth)
 }
 
-function closeNav () {
+export function closeNav () {
     document.getElementById("nav").style.width = "0";
 }
 
