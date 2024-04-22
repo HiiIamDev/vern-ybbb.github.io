@@ -24,7 +24,9 @@ export default function CardsGallery ({
                     <div className="content gallery">
                         <p>{miniDesc}</p>
                         <div className="button about">
-                            <a href={imgUrl} target="_blank">See More...</a>
+                            <a href={imgUrl} target="_blank" style={{
+                                color: 'white'
+                            }}>See Image...</a>
                         </div>
                     </div>
                 </div>

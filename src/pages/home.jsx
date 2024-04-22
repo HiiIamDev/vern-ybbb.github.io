@@ -13,6 +13,18 @@ import CardsEvents from '../utils/event/cards'
 import CardsGallery from '../utils/gallery/cards'
 import BreakY from '../utils/break'
 
+function keys() {
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let randomValue = '';
+
+  for (let i = 0; i < 6; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    randomValue += characters[randomIndex];
+  }
+
+  return randomValue;
+}
+
 
 export default function HomeDirectory () {
   const checkerExp = (buttons) => {
@@ -42,6 +54,7 @@ export default function HomeDirectory () {
           </WrapperFullScreen>
         </WrapperMid>
         {/* anggota */}
+
         <WrapperMid color='alternate' locate='explore'>
         <br />
           <div className="heading explore">
@@ -54,23 +67,23 @@ export default function HomeDirectory () {
             </div>
             <SwitchButton />
           </div>
+          <br />
+          <br />
           
-
-          <Proggrams key='proggrams'>  
-          <BreakY />
+          <Proggrams>  
+          {/* <BreakY /> */}
             <div className="prog act"
               style={
                 {
                   width: '100%',
-                  height: '100vh'
+                  height: 'auto'
                 }
               } id='proggrams'
             >
-              <div className="container">
-              <div className="wrap">
-              {
-                ([...Array(4)].map(() => (
-                  <Cards content={{
+                <div className="wrapper">
+                  {
+                    ([...Array(4)].map(() => (
+                      <Cards content={{
                       id: 'programs',
                       img : "https://placeholder.co/500x300",
                       imgSize: '100%',
@@ -80,63 +93,82 @@ export default function HomeDirectory () {
                       parafMini : "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, tempore!",
                       urlBtn : "#button",
                       paraf : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta eveniet tempore asperiores deserunt distinctio obcaecati sequi mollitia aperiam veritatis, odit, enim similique in provident consequuntur iusto, est a quam. Doloremque dolores nobis qui cupiditate corporis laborum quod modi sint, similique aut."
-                    }} tags />
-                )))
-              }
-              </div>
-              </div>
+                    }} key={keys()} />
+                    )))
+                  }
+                </div>
             </div>
             <div className="event"
               style={
                 {
                   width: '100%',
-                  height: '100vh'
+                  height: 'auto'
                 }
               } id='event'
             >
-              <CardsEvents content = {{
-                  id: 'events',
-                  title: 'Event',
-                  date: '12/01/24',
-                  imgUrl: 'https://placeholder.co/500x300',
-                  location: 'Jl. Jatihandap No 1',
-                  presentedBy: 'Bamboo Fest',
-                  descript: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, tempore!'
-                }} />
+              <div className="wrapper">
+                {
+                ([...Array(4)].map(() => (
+                  <CardsEvents content = {{
+                    id: 'events',
+                    title: 'Event',
+                    date: '12/01/24',
+                    imgUrl: 'https://placeholder.co/500x300',
+                    location: 'Jl. Jatihandap No 1',
+                    presentedBy: 'Bamboo Fest',
+                    descript: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, tempore!'
+                  }} key={keys()}/>
+                )))
+              }
+              </div>
               
             </div>
             <div className="gallery"
               style={
                 {
                   width: '100%',
-                  height: '100vh'
+                  height: 'auto'
                 }
               } id='gallery'
             >
-              <CardsGallery content = {{
-                  id: 'gallery',
-                  imgUrl: 'https://placeholder.co/500x500',
-                  title: 'Gallery',
-                  date: '12/01/24',
-                  miniDesc: 'lorem ipsum dolor sit amet consectetur adipisicing elit'
-                }}/> 
+              <div className="wrapper">
+                {([...Array(4)].map(() => (
+                  <CardsGallery 
+                    content = {
+                      {
+                        id: 'gallery',
+                        imgUrl: 'https://placeholder.co/500x300',
+                        title: "Gallery",
+                        miniDesc: 'lorem ipsum dolor sit amet consectetur adipisicing elit.',
+                        date: '12/02/24'
+                      }
+                    } key={keys()}
+                  />
+                )))}
+              </div>
             </div>
             <div className="news"
               style={
                 {
                   width: '100%',
-                  height: '100vh'
+                  height: 'auto'
                 }
               } id='news'
             >
-              <CardsNews context={{
-                  id: 'news',
-                  imgUrl: "https://placeholder.co/500x300",
-                  title: 'News',
-                  date: '12/01/24',
-                  writter: 'John Doe',
-                  description: 'lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, tempore!'
-                }} />  
+              <div className="wrapper">
+                {
+                  ([...Array(4)].map(() => (
+                    <CardsNews context={{
+                      id: 'news',
+                      imgUrl: "https://placeholder.co/500x300",
+                      title: 'News',
+                      date: '12/01/24',
+                      writter: 'John Doe',
+                      description: 'lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, tempore!'
+                    }} key={keys()} />  
+                  )))
+                }
+              </div>
             </div>
           </Proggrams>
         </WrapperMid>

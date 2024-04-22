@@ -10,46 +10,47 @@ export default function SwitchButton() {
     const [lastActiveButton, setLastActiveButton] = useState(null);
 
     function calling(button) {
-
-        switch (button.id) {
-            case "button1":
+        function switchFn (buttonRn) {
+            if (button.id == "button1") {
                 proggrams.forEach(item => item.classList.add('act'));
                 events.forEach(item => item.classList.remove('act'));
                 gallery.forEach(item => item.classList.remove('act'));
                 news.forEach(item => item.classList.remove('act'));
-                break
-            case "button2":
+            } if (button.id == "button2") {
                 proggrams.forEach(item => item.classList.remove('act'));
                 events.forEach(item => item.classList.add('act'));
                 gallery.forEach(item => item.classList.remove('act'));
                 news.forEach(item => item.classList.remove('act'));
-                break
-            case "button3":
+                console.log('menyala abangkh')
+            } if (button.id == "button3") {
                 proggrams.forEach(item => item.classList.remove('act'));
                 events.forEach(item => item.classList.remove('act'));
                 gallery.forEach(item => item.classList.add('act'));
                 news.forEach(item => item.classList.remove('act'));
-                break
-            case "button4":
+            } if (button.id == "button4") {
                 proggrams.forEach(item => item.classList.remove('act'));
                 events.forEach(item => item.classList.remove('act'));
                 gallery.forEach(item => item.classList.remove('act'));
-                news.forEach(item => item.classList.add('act'));
-                break
+                news.forEach(item => item.classList.add('act'));        
+            }
         }
+        
 
         const buttons = document.querySelectorAll('.button-switch');
 
         buttons.forEach(function (btn) {
             btn.classList.remove('active');
         });
+        
 
-        if (lastActiveButton !== null) {
+        if (lastActiveButton !== null ) {
             lastActiveButton.classList.remove('active');
+
         }
         button.classList.add('active');
 
         setLastActiveButton(button);
+        switchFn(button)
     }
 
     return (

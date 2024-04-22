@@ -22,10 +22,9 @@ export default function CardsEvents ({
                 />
             </div>
             <div className="content event">
-                <h2 className="h2-events"> {title} </h2> <br />
-                <span className="dates"> - {date} - </span> <br />
-                <br />
-                <span className="presents">{presentedBy}</span> <br />
+                <h2 className="h2-events"> {title} </h2>
+                <span className="dates"> {date} </span>
+                <span className="presents">{presentedBy}</span>
                 <p className="paraf events">
                     {descript}
                 </p>
