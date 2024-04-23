@@ -65,11 +65,8 @@ export default function HomeDirectory () {
             <div className="paraf-pr">
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus maxime harum a?</p>
             </div>
-            <SwitchButton />
-          </div>
-          <br />
-          <br />
-          
+          </div>      
+              <SwitchButton />    
           <Proggrams>  
           {/* <BreakY /> */}
             <div className="prog act"
@@ -79,7 +76,14 @@ export default function HomeDirectory () {
                   height: 'auto'
                 }
               } id='proggrams'
-            >
+            > 
+                <div className="text-center">
+                  <h2>Proggrams Us</h2>
+                  <p className="thin-200">
+                    Lorem ipsum dolor sit amet consectetur adipisicing 
+                  </p>
+                </div>
+                <br />
                 <div className="wrapper">
                   {
                     ([...Array(4)].map(() => (
@@ -97,6 +101,9 @@ export default function HomeDirectory () {
                     )))
                   }
                 </div>
+                <div className="center">
+                  <a href="/proggrams" className="more">See More About Proggrams..</a>
+                </div>
             </div>
             <div className="event"
               style={
@@ -106,6 +113,12 @@ export default function HomeDirectory () {
                 }
               } id='event'
             >
+              <div className="text-center">
+                  <h2>Events Us</h2>
+                  <p className="thin-200">
+                    Lorem ipsum dolor sit amet consectetur adipisicing 
+                  </p>
+              </div>
               <div className="wrapper">
                 {
                 ([...Array(4)].map(() => (
@@ -121,7 +134,9 @@ export default function HomeDirectory () {
                 )))
               }
               </div>
-              
+              <div className="center">
+                  <a href="/events" className="more">See More About Events..</a>
+                </div>
             </div>
             <div className="gallery"
               style={
@@ -131,6 +146,12 @@ export default function HomeDirectory () {
                 }
               } id='gallery'
             >
+            <div className="text-center">
+                  <h2>Gallery Us</h2>
+                  <p className="thin-200">
+                    Lorem ipsum dolor sit amet consectetur adipisicing 
+                  </p>
+                </div>
               <div className="wrapper">
                 {([...Array(4)].map(() => (
                   <CardsGallery 
@@ -146,6 +167,9 @@ export default function HomeDirectory () {
                   />
                 )))}
               </div>
+              <div className="center">
+                  <a href="/gallery" className="more">See More About Gallery..</a>
+                </div>
             </div>
             <div className="news"
               style={
@@ -155,6 +179,12 @@ export default function HomeDirectory () {
                 }
               } id='news'
             >
+            <div className="text-center">
+                  <h2>News</h2>
+                  <p className="thin-200">
+                    Lorem ipsum dolor sit amet consectetur adipisicing 
+                  </p>
+                </div>
               <div className="wrapper">
                 {
                   ([...Array(4)].map(() => (
@@ -169,6 +199,9 @@ export default function HomeDirectory () {
                   )))
                 }
               </div>
+              <div className="center">
+                  <a href="/news" className="more">See More About News..</a>
+                </div>
             </div>
           </Proggrams>
         </WrapperMid>

@@ -18,7 +18,7 @@ export default function About () {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <span className="tagged">Magni, veritatis quidem impedit mollitia voluptatum ipsa,</span> deserunt ex saepe dicta vel omnis rem laborum atque! <a className="keyword" href="#idk">Dolor eos fugit</a> numquam debitis nemo.</p>
 
                     <div className="button about">
-                        <a href="#idk">See Full <Icon.ArrowRight className="icon"/></a>
+                        <a href="#explore">Explore about us.. <Icon.ArrowRight className="icon"/></a>
                     </div>
                 </div>
             </div>

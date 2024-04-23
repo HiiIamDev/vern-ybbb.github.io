@@ -12,8 +12,13 @@ export default function App () {
         <Route path='/' element={<HomeDirectory/>}/>
         <Route path='*' element={(
           <>
+          <Nav />
+          <br/>
+          <br/>
+          <br/>
+          
             <h1>Error Web Page Not Found</h1>
-            <Nav />
+            
             <ResponsiveNav /> 
           </>
         )}/>

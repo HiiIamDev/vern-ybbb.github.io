@@ -54,13 +54,15 @@ export default function SwitchButton() {
     }
 
     return (
-        <div className="switch-wrapper">
-            <div className="switch-container">
-                <a onClick={() => calling(document.getElementById("button1"))} id="button1" href="#proggram" className="button-switch active">Proggrams</a>
-                <a onClick={() => calling(document.getElementById("button2"))} id="button2" href="#event" className="button-switch">Event</a>
-                <a onClick={() => calling(document.getElementById("button3"))} id="button3" href="#gallery" className="button-switch">Gallery</a>
-                <a onClick={() => calling(document.getElementById("button4"))} id="button4" href="#news" className="button-switch">News</a>
+        <> 
+            <div className="switch-wrapper">
+                <div className="switch-container">
+                    <a onClick={() => calling(document.getElementById("button1"))} id="button1" href="#proggram" className="button-switch active">Proggrams</a>
+                    <a onClick={() => calling(document.getElementById("button2"))} id="button2" href="#event" className="button-switch">Event</a>
+                    <a onClick={() => calling(document.getElementById("button3"))} id="button3" href="#gallery" className="button-switch">Gallery</a>
+                    <a onClick={() => calling(document.getElementById("button4"))} id="button4" href="#news" className="button-switch">News</a>
+                </div>
             </div>
-        </div>
+        </>
     );
 }
