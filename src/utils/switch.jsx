@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function SwitchButton() {
+export default function SwitchButton({lastComponent}) {
 
     let proggrams = document.querySelectorAll('.prog')
     let events = document.querySelectorAll('.event')
@@ -21,7 +21,6 @@ export default function SwitchButton() {
                 events.forEach(item => item.classList.add('act'));
                 gallery.forEach(item => item.classList.remove('act'));
                 news.forEach(item => item.classList.remove('act'));
-                console.log('menyala abangkh')
             } if (button.id == "button3") {
                 proggrams.forEach(item => item.classList.remove('act'));
                 events.forEach(item => item.classList.remove('act'));
@@ -51,6 +50,8 @@ export default function SwitchButton() {
 
         setLastActiveButton(button);
         switchFn(button)
+        console.log(`From switch.jsx is: ${button.id}`)
+        lastComponent(button.id)
     }
 
     return (

@@ -12,6 +12,7 @@ import SwitchButton from '../utils/switch'
 import CardsEvents from '../utils/event/cards'
 import CardsGallery from '../utils/gallery/cards'
 import BreakY from '../utils/break'
+import React, { useState } from 'react'
 
 function keys() {
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -27,19 +28,24 @@ function keys() {
 
 
 export default function HomeDirectory () {
-  const checkerExp = (buttons) => {
-    console.log()
+  let [component, setComponent] = useState(null)
+
+  if (component == null)  {
+    setComponent('button1')
   }
+
+  async function componentsAsync (comp) {
+    component = comp
+    console.log(component)  
+  }
+
+  // componentsAsync('button1')
 
   return (
     <>
       <div id="home">
         <Nav /> 
         <ResponsiveNav />
-          {/* <div className="skipper">
-            <br />
-            <br />
-          </div> */}
 
         <Home>
           <Menu />
@@ -66,146 +72,17 @@ export default function HomeDirectory () {
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus maxime harum a?</p>
             </div>
           </div>      
-              <SwitchButton />    
+              <SwitchButton lastComponent={componentsAsync}/>    
           <Proggrams>  
-          {/* <BreakY /> */}
-            <div className="prog act"
-              style={
-                {
-                  width: '100%',
-                  height: 'auto'
-                }
-              } id='proggrams'
-            > 
-                <div className="text-center">
-                  <h2>Proggrams Us</h2>
-                  <p className="thin-200">
-                    Lorem ipsum dolor sit amet consectetur adipisicing 
-                  </p>
-                </div>
-                <br />
-                <div className="wrapper">
-                  {
-                    ([...Array(4)].map(() => (
-                      <Cards content={{
-                      id: 'programs',
-                      img : "https://placeholder.co/500x300",
-                      imgSize: '100%',
-                      title : "Proggrams",
-                      date: '12/01/24',
-                      leads : "John Doe",
-                      parafMini : "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, tempore!",
-                      urlBtn : "#button",
-                      paraf : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta eveniet tempore asperiores deserunt distinctio obcaecati sequi mollitia aperiam veritatis, odit, enim similique in provident consequuntur iusto, est a quam. Doloremque dolores nobis qui cupiditate corporis laborum quod modi sint, similique aut."
-                    }} key={keys()} />
-                    )))
-                  }
-                </div>
-                <div className="center">
-                  <a href="/proggrams" className="more">See More About Proggrams..</a>
-                </div>
-            </div>
-            <div className="event"
-              style={
-                {
-                  width: '100%',
-                  height: 'auto'
-                }
-              } id='event'
-            >
-              <div className="text-center">
-                  <h2>Events Us</h2>
-                  <p className="thin-200">
-                    Lorem ipsum dolor sit amet consectetur adipisicing 
-                  </p>
-              </div>
-              <div className="wrapper">
-                {
-                ([...Array(4)].map(() => (
-                  <CardsEvents content = {{
-                    id: 'events',
-                    title: 'Event',
-                    date: '12/01/24',
-                    imgUrl: 'https://placeholder.co/500x300',
-                    location: 'Jl. Jatihandap No 1',
-                    presentedBy: 'Bamboo Fest',
-                    descript: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, tempore!'
-                  }} key={keys()}/>
-                )))
-              }
-              </div>
-              <div className="center">
-                  <a href="/events" className="more">See More About Events..</a>
-                </div>
-            </div>
-            <div className="gallery"
-              style={
-                {
-                  width: '100%',
-                  height: 'auto'
-                }
-              } id='gallery'
-            >
-            <div className="text-center">
-                  <h2>Gallery Us</h2>
-                  <p className="thin-200">
-                    Lorem ipsum dolor sit amet consectetur adipisicing 
-                  </p>
-                </div>
-              <div className="wrapper">
-                {([...Array(4)].map(() => (
-                  <CardsGallery 
-                    content = {
-                      {
-                        id: 'gallery',
-                        imgUrl: 'https://placeholder.co/500x300',
-                        title: "Gallery",
-                        miniDesc: 'lorem ipsum dolor sit amet consectetur adipisicing elit.',
-                        date: '12/02/24'
-                      }
-                    } key={keys()}
-                  />
-                )))}
-              </div>
-              <div className="center">
-                  <a href="/gallery" className="more">See More About Gallery..</a>
-                </div>
-            </div>
-            <div className="news"
-              style={
-                {
-                  width: '100%',
-                  height: 'auto'
-                }
-              } id='news'
-            >
-            <div className="text-center">
-                  <h2>News</h2>
-                  <p className="thin-200">
-                    Lorem ipsum dolor sit amet consectetur adipisicing 
-                  </p>
-                </div>
-              <div className="wrapper">
-                {
-                  ([...Array(4)].map(() => (
-                    <CardsNews context={{
-                      id: 'news',
-                      imgUrl: "https://placeholder.co/500x300",
-                      title: 'News',
-                      date: '12/01/24',
-                      writter: 'John Doe',
-                      description: 'lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, tempore!'
-                    }} key={keys()} />  
-                  )))
-                }
-              </div>
-              <div className="center">
-                  <a href="/news" className="more">See More About News..</a>
-                </div>
-            </div>
+             {component === 'button1' && <p>Proggram</p>}
+             {component === 'button2' && <p>Event</p>}
+             {component === 'button3' && <p>Gallery</p>}
+             {component === 'button4' && <p>News</p>}
           </Proggrams>
         </WrapperMid>
       </div>
     </>
   )
 }
+
+            

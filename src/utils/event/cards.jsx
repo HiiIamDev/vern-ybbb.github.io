@@ -31,6 +31,7 @@ export default function CardsEvents ({
                 <span className="location events">
                     <Icon.MapPin className="fs-12px"/> {location}
                 </span>
+                <br />
             </div>
         </div>
     )

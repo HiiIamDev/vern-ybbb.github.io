@@ -824,12 +824,20 @@ nav ul {
   opacity: 1;
 }
 
+.elementCenter {
+  display: flex;
+  justify-content: center;
+/*  flex-direction: column;*/
+  width: 100%%;
+}
+
 .wrapper {
   display: flex;
-  width: 100%;
+  width: 95%;
   height: auto;
 
   justify-content: center;
+/*  grid-column: 2;*/
   align-items: center;
 /*  flex-direction: column;*/
   flex-wrap: wrap;
