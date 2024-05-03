@@ -1,38 +1,38 @@
 import React, { useState } from 'react';
 
-export default function SwitchButton({lastComponent}) {
+export default function SwitchButton({buttonClass}) {
 
-    let proggrams = document.querySelectorAll('.prog')
-    let events = document.querySelectorAll('.event')
-    let gallery = document.querySelectorAll('.gallery')
-    let news = document.querySelectorAll('.news')
+    // let proggrams = document.querySelectorAll('.prog')
+    // let events = document.querySelectorAll('.event')
+    // let gallery = document.querySelectorAll('.gallery')
+    // let news = document.querySelectorAll('.news')
 
     const [lastActiveButton, setLastActiveButton] = useState(null);
 
     function calling(button) {
-        function switchFn (buttonRn) {
-            if (button.id == "button1") {
-                proggrams.forEach(item => item.classList.add('act'));
-                events.forEach(item => item.classList.remove('act'));
-                gallery.forEach(item => item.classList.remove('act'));
-                news.forEach(item => item.classList.remove('act'));
-            } if (button.id == "button2") {
-                proggrams.forEach(item => item.classList.remove('act'));
-                events.forEach(item => item.classList.add('act'));
-                gallery.forEach(item => item.classList.remove('act'));
-                news.forEach(item => item.classList.remove('act'));
-            } if (button.id == "button3") {
-                proggrams.forEach(item => item.classList.remove('act'));
-                events.forEach(item => item.classList.remove('act'));
-                gallery.forEach(item => item.classList.add('act'));
-                news.forEach(item => item.classList.remove('act'));
-            } if (button.id == "button4") {
-                proggrams.forEach(item => item.classList.remove('act'));
-                events.forEach(item => item.classList.remove('act'));
-                gallery.forEach(item => item.classList.remove('act'));
-                news.forEach(item => item.classList.add('act'));        
-            }
-        }
+        // function switchFn (buttonRn) {
+        //     if (button.id == "button1") {
+        //         proggrams.forEach(item => item.classList.add('act'));
+        //         events.forEach(item => item.classList.remove('act'));
+        //         gallery.forEach(item => item.classList.remove('act'));
+        //         news.forEach(item => item.classList.remove('act'));
+        //     } if (button.id == "button2") {
+        //         proggrams.forEach(item => item.classList.remove('act'));
+        //         events.forEach(item => item.classList.add('act'));
+        //         gallery.forEach(item => item.classList.remove('act'));
+        //         news.forEach(item => item.classList.remove('act'));
+        //     } if (button.id == "button3") {
+        //         proggrams.forEach(item => item.classList.remove('act'));
+        //         events.forEach(item => item.classList.remove('act'));
+        //         gallery.forEach(item => item.classList.add('act'));
+        //         news.forEach(item => item.classList.remove('act'));
+        //     } if (button.id == "button4") {
+        //         proggrams.forEach(item => item.classList.remove('act'));
+        //         events.forEach(item => item.classList.remove('act'));
+        //         gallery.forEach(item => item.classList.remove('act'));
+        //         news.forEach(item => item.classList.add('act'));        
+        //     }
+        // }
         
 
         const buttons = document.querySelectorAll('.button-switch');
@@ -49,9 +49,9 @@ export default function SwitchButton({lastComponent}) {
         button.classList.add('active');
 
         setLastActiveButton(button);
-        switchFn(button)
-        console.log(`From switch.jsx is: ${button.id}`)
-        lastComponent(button.id)
+        // switchFn(button)
+        buttonClass(button.id)
+        // console.log(`From switch.jsx is: ${button.id}`)
     }
 
     return (

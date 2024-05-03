@@ -14,7 +14,6 @@ export default function Cards(
             paraf,
             date
         },
-        tags
     }
 ) {
     return (
@@ -24,9 +23,9 @@ export default function Cards(
                 alt={title} 
                 width={imgSize} 
             />
-            <div className="tags">
+            {/* <div className="tags">
                 <span>{tags}</span>
-            </div>
+            </div> */}
             <div className="paraf-cards">
                 <h2>{title}</h2>
                 <span className="blurred">{leads}</span><br />
