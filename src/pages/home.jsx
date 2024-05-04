@@ -16,6 +16,22 @@ import React, { useState } from 'react'
 import Contacts from '../utils/contacts/contacts'
 
 function RenderExplore ({value}) {
+  function galleryTags () {
+    // TEMPORARY USING THIS 
+    let x = Math.floor(Math.random() * 2) + 1;
+    switch (x) {
+      case 1 :
+        return {
+          'tags': 'Product',
+          'style' : 'white-blue'
+        }
+      case 2: 
+        return {
+          'tags': 'Activity',
+          'style' : 'green'
+        }
+    }
+  }
   switch (value) {
     case 'uno':
       return (
@@ -124,7 +140,8 @@ function RenderExplore ({value}) {
                         imgUrl: 'https://placeholder.co/500x300',
                         title: "Gallery",
                         miniDesc: 'lorem ipsum dolor sit amet consectetur adipisicing elit.',
-                        date: '12/02/24'
+                        date: '12/02/24',
+                        obj: galleryTags()
                       }
                     } key={keys()}
                   />

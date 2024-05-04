@@ -4,7 +4,7 @@ import { openNav, closeNav } from './responsiveNav'
 export function ContentNav () {
     return (    
         <ul>
-            <li><a onClick={closeNav} href="#" className="anchor nav">Home</a></li>
+            <li><a onClick={closeNav} href="/" className="anchor nav">Home</a></li>
             <li><a onClick={closeNav} href="#about" className="anchor nav">About</a></li>
             {/*<li><a onClick={closeNav} href="#contact" className="anchor nav">Contact</a></li>*/}
             <li><a onClick={closeNav} href="#explore" className="anchor nav">Explore</a></li>

@@ -1,22 +1,22 @@
 
 export default function CardsGallery ({
-    children,
     content: {
         id, 
         imgUrl,
         title,
         miniDesc,
-        date
+        date,
+        obj
     }
 }) {    
     return (
         <div className="cards-gallery"  id={id}>
             <div className="wrp">
                 <div className="img">
-                    <img src={imgUrl} alt="" srcset="" />
+                    <img src={imgUrl} />
                 </div>
                 <div className="tags">
-                    <span className="white-blue">Product</span> {/*Green Or White Blue From Props*/}
+                    <span className={obj.style}>{obj.tags}</span> {/*Green Or White Blue From Props*/}
                 </div>
                 <div className="wrapper glr">
                     <div className="content gallery">
