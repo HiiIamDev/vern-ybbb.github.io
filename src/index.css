@@ -70,6 +70,11 @@
   color: var(--footer-color);
 }
 
+.contact {
+  background-color: #9EC8B9;
+  color: #092635;
+}
+
 .alternate {
   align-items: center;
   background-color: var(--alternat-color);
@@ -84,7 +89,7 @@
 
 nav {
   width: 100%;
-  z-index: 3;
+  z-index: 300000;
   position: fixed;
   background-color: var(--background);
 }
@@ -888,6 +893,62 @@ nav ul {
 
 .more:hover {
   background-color: var(--primary-color);
+}
+
+.titleContacts {
+  text-align: center;
+  width: 60%;
+}
+
+.cardsContacts {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  padding: 10px;
+  justify-content: center;
+  width: auto;
+  background-color: #bce4d7;
+}
+
+.wrapperMaps {
+  width: 100%;
+  overflow: hidden;
+  height: autp;
+}
+
+.border-res {
+  background-color: #6fb480;
+  color: var(--background);
+  padding: 7px;
+}
+
+.container-map {
+  width: 100%;
+  height: 200px;
+}
+
+.pin {
+  /* color: #031016; */
+  transform: translateY(6px);
+  width: 17px;
+}
+
+.text-location {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.wrapperContacts {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  /* gap: 20px; */
+  width: 95%;
+  background-color: #bce4d7;
+  overflow: hidden;
+  border-radius: 4px;
 }
 
 

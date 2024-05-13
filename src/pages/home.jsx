@@ -256,7 +256,7 @@ export default function HomeDirectory () {
           </Proggrams>
         </WrapperMid>
         {/* CONTACTS PAGES */}
-        <WrapperMid>
+        <WrapperMid color='contact'>
           <Contacts />
         </WrapperMid>
       </div>
