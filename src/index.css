@@ -16,6 +16,8 @@
   --button-color: #78A083;
   --button-color-hover: #52725b;
 
+  --profile-cards: #E4D7BC;
+
   
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
@@ -881,6 +883,11 @@ nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  /* optional */
+
+  flex-direction: column;
+  text-align: center;
 }
 
 .more {
@@ -902,7 +909,7 @@ nav ul {
 
 .cardsContacts {
   display: flex;
-  /* flex-direction: column; */
+   flex-direction: column; 
   justify-content: center;
   padding: 10px;
   justify-content: center;
@@ -948,7 +955,23 @@ nav ul {
   width: 95%;
   background-color: #bce4d7;
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: 3px;
+
+/*  border editing style */
+
+  border-bottom: 4px solid #416B5D;
+  border-right: 4px solid #416B5D;
+}
+
+.hr-contacts {
+  width: 70%;
+  height: 1px;
+
+  margin-top: 10px;
+/*  height: 1px;*/
+  background-color: #59666E;
+  border-radius: 12px;
+/*  border: 1px solid var(--primary-color);*/
 }
 
 

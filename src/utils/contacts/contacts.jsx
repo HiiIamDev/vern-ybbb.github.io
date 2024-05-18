@@ -45,11 +45,14 @@ function CardsContacts (
         <div className="wrapperContacts">
             <Maps />
             {/* DIFFERENT ELEMENT HERE */}
-            <div className="cardsContacts">
-                <div className="titleContacts">
+            <div className="center cardsContacts">
+                <div className=" titleContacts">
                     <h2>Contact Us</h2>
-                    <span>Jika Anda memiliki pertanyaan atau umpan balik, silakan hubungi kami menggunakan formulir di bawah ini atau melalui informasi kontak di bawah ini</span>                    
+                    <span>Silahkan hubungi kami jika Anda memiliki pertanyaan atau umpan balik</span>                    
+                    <br />
                 </div>
+                <div className="hr-contacts"> </div>   
+                 {/*Break*/}
                 <div className="wrapper-form">
                     <div className="opsi-form">
                         <h3></h3>
