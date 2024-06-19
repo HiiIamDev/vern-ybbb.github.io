@@ -224,11 +224,15 @@ function CardsContacts (
         <div className="wrapperContacts">
             <Maps />
             {/* DIFFERENT ELEMENT HERE */}
-            <div className="cardsContacts">
-                <div className="titleContacts">
+            <div className="center cardsContacts">
+                <div className=" titleContacts">
                     <h2>Contact Us</h2>
-                    <span>Jika Anda memiliki pertanyaan atau umpan balik, silakan hubungi kami menggunakan formulir di bawah ini atau</span>                    
-                    <div className="contacts-hr"></div>
+                    <span>Jika Anda memiliki pertanyaan atau umpan balik, silakan hubungi kami menggunakan formulir di bawah ini atau melalui informasi kontak di bawah ini</span>                    
+                </div>
+                <div className="wrapper-form">
+                    <div className="opsi-form">
+                        <h3></h3>
+                    </div>
                 </div>
             </div>
             <div className="wrapper-side">
