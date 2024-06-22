@@ -918,44 +918,59 @@ nav ul {
 }
 
 .wrapperMaps {
-  width: 100%;
+  width: 50%;
   overflow: hidden;
-  height: autp;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.fs-14 {
+  font-size: 14px;
 }
 
 .border-res {
   background-color: #6fb480;
   color: var(--background);
-  padding: 7px;
+/*  padding: 7px;*/
 }
 
-.container-map {
-  width: 100%;
+.leaflet-container {
+  width: 50%;
   height: 100%;
 }
 
 .pin {
   /* color: #031016; */
   transform: translateY(6px);
-  width: 17px;
+  width: 15px;
 }
 
 .text-location {
-  text-decoration: underline;
-  text-underline-offset: 3px;
+/*  text-decoration: underline;*/
+/*  text-underline-offset: 3px;*/
+  margin-bottom: 4px;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.cards-flex {
+  width: 50%;
+  height: 100%;
 }
 
 .wrapperContacts {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+/*  flex-direction: column;*/
   margin-top: 30px;
   margin-bottom: 30px;
   /* gap: 20px; */
   width: 90%;
+  height: 80vh;
   background-color: #bce4d7;
   overflow: hidden;
-  border-radius: 3px;
+  border-radius: 4px;
 
 /*  border editing style */
 
@@ -983,9 +998,13 @@ nav ul {
   background-color: var(--primary-color);
 }
 
+/*contacts form*/
 
-@media screen and (min-width: 540px ) {
-  .wrapper-res-nav {
+
+
+
+@media scr.wrapper-een and (min-width: 540px ) {
+  res-nav {
     width: 0;
   }
   .skipper {
